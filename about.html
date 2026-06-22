@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Petal & Bloom</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --background: #faf7f2;
+      --foreground: #1c1a16;
+      --card: #f5f0e8;
+      --primary: #2d4a3e;
+      --primary-foreground: #faf7f2;
+      --secondary: #ede8df;
+      --muted-foreground: #6b6455;
+      --accent: #c4875a;
+      --accent-foreground: #faf7f2;
+      --border: rgba(44, 35, 20, 0.12);
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.96);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 0.7rem; }
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: grid;
+      place-items: center;
+    }
+    .logo-icon svg { color: var(--primary-foreground); }
+    .logo-text { font-size: 1.1rem; font-weight: 700; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: var(--muted-foreground); font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .btn-primary {
+      padding: 0.7rem 1.2rem;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+    .page-hero {
+      background: linear-gradient(90deg, var(--secondary), var(--background));
+      border-radius: 1.5rem;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .page-hero-content { padding: 3rem; }
+    .page-tag { color: var(--accent); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 700; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { font-size: clamp(2.5rem, 4vw, 4rem); margin: 0.6rem 0 1rem; }
+    .page-hero p { color: var(--muted-foreground); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
+    .stat-box {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+    .story-text { padding-right: 1rem; }
+    .story-text p { margin-bottom: 1rem; color: var(--muted-foreground); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    .value-card {
+      background: var(--card);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+    }
+    footer {
+      background: var(--foreground);
+      color: var(--background);
+      padding: 3rem 0 1.5rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .footer-col p, .footer-col a { color: rgba(250, 247, 242, 0.7); }
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .page-hero, .story-grid { grid-template-columns: 1fr; }
+      .stats-grid, .values-grid, .footer-grid { grid-template-columns: 1fr 1fr; }
+      .page-hero-content { padding: 2rem; }
+    }
+    @media (max-width: 480px) {
+      .stats-grid, .values-grid, .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </div>
+        <span class="logo-text">Petal & Bloom</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="btn-primary">Book a Consultation</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="page-hero">
+        <div class="page-hero-content">
+          <p class="page-tag">Our Story</p>
+          <h1>Rooted in passion, grown with care</h1>
+          <p>Petal & Bloom began as a small floral studio and has grown into a trusted place for thoughtful bouquets, events, and unforgettable gifting moments.</p>
+          <div class="stats-grid">
+            <div class="stat-box"><strong>10+</strong><br /><span>Years</span></div>
+            <div class="stat-box"><strong>4,200+</strong><br /><span>Clients</span></div>
+            <div class="stat-box"><strong>98%</strong><br /><span>Positive reviews</span></div>
+            <div class="stat-box"><strong>100%</strong><br /><span>Sustainable</span></div>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1718568698986-eb9045432622?w=800&h=900&fit=crop&auto=format" alt="Florist arranging flowers" />
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="story-grid">
+        <div class="story-text">
+          <p class="page-tag">Who We Are</p>
+          <h2>Flowers designed for real moments</h2>
+          <p>We believe floral design should feel personal, fresh, and intentional. Every bouquet is shaped with seasonal blooms, premium foliage, and a keen eye for detail.</p>
+          <p>Our studio works closely with local growers and clients to create arrangements that celebrate love, gratitude, celebration, and everyday beauty.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=700&h=520&fit=crop&auto=format" alt="Flower arrangement close-up" />
+      </div>
+    </section>
+
+    <section class="container">
+      <p class="page-tag">What Matters to Us</p>
+      <h2>Our values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>Seasonal Beauty</h3>
+          <p>We choose flowers at their peak for freshness, color, and longevity.</p>
+        </div>
+        <div class="value-card">
+          <h3>Thoughtful Design</h3>
+          <p>Each arrangement is tailored to your occasion, colors, and mood.</p>
+        </div>
+        <div class="value-card">
+          <h3>Sustainable Practice</h3>
+          <p>We prioritize local sourcing, compostable wrapping, and low-waste studio methods.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Petal & Bloom</h3>
+        <p>Artisan floral studio crafting bespoke arrangements since 2014.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="products.html">Products</a></p>
+        <p><a href="services.html">Services</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>42 Blossom Lane</p>
+        <p>hello@petalandbloom.com</p>
+        <p>+1 (555) 123-4567</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
